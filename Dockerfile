@@ -2,9 +2,9 @@
 FROM ruby:3.2.2
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /municipe
-COPY Gemfile /Gemfile
-COPY Gemfile.lock /Gemfile.lock
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
+RUN gem install cpf_cnpj
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
