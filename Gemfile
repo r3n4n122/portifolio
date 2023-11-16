@@ -9,8 +9,10 @@ gem "rails", "~> 7.0.6"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use postgresql as the database for Active Record
+gem "bootstrap-sass"# Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
+
+gem 'jquery-rails'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"

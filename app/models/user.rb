@@ -13,7 +13,9 @@ class User < ApplicationRecord
     end
   end
 
-  private 
+  def format_date
+    self.date_of_birth.strftime("%d/%m/%Y")
+  end
 
   def format_cpf
     cpf = CPF.new(self.cpf)

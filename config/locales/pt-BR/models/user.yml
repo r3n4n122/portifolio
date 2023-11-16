@@ -1,0 +1,6 @@
+pt-BR:
+  activerecord:
+    models:
+      attributes: 
+        user: 
+          full_name: Nome Completo

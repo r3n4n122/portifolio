@@ -1,0 +1,37 @@
+<div style="text-align: center;">
+  <h2>Cadastro de Municipe</h2>
+</div>
+<div style="padding: 10%;">
+  <table class="table">
+    <thead class="table">
+      <tr style="background: black; color: white;"> 
+        <th>#</th> 
+        <th>Nome Completo</th> 
+        <th>CPF</th> 
+        <th>CNS</th>
+        <th>Email</th> 
+        <th>Telefone</th> 
+        <th>Data de aniversatio</th>
+        <th>Configurações</th>
+      </tr> 
+    </thead> 
+    <tbody> 
+      <% @users.each do |s| %>
+        <tr> 
+          <th scope="row"><%= s.id %></th> 
+          <td><%= s.full_name %></td> 
+          <td><%= s.cpf %></td>
+          <td><%= s.cns %></td>
+          <td><%= s.email %></td> 
+          <td><%= s.phone %></td>
+          <td><%= s.format_date %></td>
+          <td>
+            <%= link_to "Editar", edit_user_path(s.id)%>
+            <%= link_to "Deletar", user_path(s.id), method: :delete, data: { confirm: 'Tem certeza?' }%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody> 
+  </table>
+  <%= link_to "Criar Municipe", new_user_path, class: "btn btn-primary" %>
+</div>

@@ -1,0 +1,11 @@
+<%= simple_form_for @user do |f| %>
+  <tr>
+    <%= f.input :full_name, class: "form-control" %>
+    <%= f.input :cpf %>
+    <%= f.input :cns %>
+    <%= f.input :email %>
+    <%= f.input :phone %> 
+    <%= f.input :date_of_birth %>
+    <%= f.button :submit %>
+  </tr>
+<% end %>
