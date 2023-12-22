@@ -8,9 +8,9 @@ default: &default
 
 development:
   <<: *default
-  database: municipe_development
+  database: portifolio_development
 
 
 test:
   <<: *default
-  database: municipe_test
+  database: portifolio_test

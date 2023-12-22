@@ -1,10 +1,9 @@
 # syntax=docker/dockerfile:1
 FROM ruby:3.2.2
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-WORKDIR /municipe
+WORKDIR /portifolio
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
-RUN gem install cpf_cnpj
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
